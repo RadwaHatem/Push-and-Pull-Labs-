@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Integrant Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+
+  <h1> Employee Information  </h1>
+
+    <div class="card" style="width: 18rem;">
+  <img src="{{employee.get_image_url}}"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{employee.name}}</h5>
+    <p class="card-text"> Email: {{employee.email}}</p>
+        <p class="card-text"> Creation Time {{employee.created_at}}</p>
+        <p class="card-text"> Updated Time {{employee.updated_at}}</p>
+       <p class="card-text"> department::: {{employee.dept.description}}</p>
+    <a href="{% url 'employees.list' %}" class="btn btn-primary">Back to all students </a>
+  </div>
+</div>
+
+
